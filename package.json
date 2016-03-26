@@ -1,0 +1,15 @@
+{
+  "name": "goat-bot",
+  "version": "0.0.1",
+  "description": "A Twitter Goat Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Dunlop",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.3",
+    "underscore": "^1.8.3"
+  }
+}
