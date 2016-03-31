@@ -27,7 +27,7 @@ var stream = T.stream('statuses/filter', { track: 'goat' });
 stream.on('tweet', function (tweet) {
   var bannedPhrase;
 
-  if(tweet.retweeted) {
+  if(tweet.retweeted_status) {
     return printSkip(tweet, 'Rewtweeted tweet');
   }
   if(tweet.user.followers_count < 40) {
