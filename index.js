@@ -15,7 +15,11 @@ var bannedPhrases = [
   /leather/i,
   /quran/i,
   /simulator/i,
-  /shearing clipper/i
+  /shearing clipper/i,
+  /electric wire/i,
+  /found hanging/i,
+  /boot/i,
+  /aerator/i
 ];
 
 var stream = T.stream('statuses/filter', { track: 'goat' });
@@ -28,6 +32,9 @@ stream.on('tweet', function (tweet) {
   }
   if(tweet.user.followers_count < 40) {
     return printSkip(tweet, 'low follower count (' + tweet.user.followers_count + ')');
+  }
+  if(tweet.user.friends_count < 40) {
+    return printSkip(tweet, 'low friends count (' + tweet.user.friends_count + ')');
   }
   if(tweet.text[0] === '@') {
     return printSkip(tweet, 'Tweeted @');
