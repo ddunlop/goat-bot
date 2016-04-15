@@ -19,7 +19,14 @@ var bannedPhrases = [
   /electric wire/i,
   /found hanging/i,
   /boot/i,
-  /aerator/i
+  /aerator/i,
+  /kobe/i,
+  /mamba/i,
+  /nigg/i,
+  /dunk/i,
+  /all time/,
+  /the goat/i,
+  /fuck/i
 ];
 
 var stream = T.stream('statuses/filter', { track: 'goat' });
