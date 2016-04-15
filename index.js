@@ -53,6 +53,10 @@ stream.on('tweet', function (tweet) {
     return printSkip(tweet, 'GOAT');
   }
 
+  if(tweet.text.length < 35) {
+    return printSkip(tweet, 'to short[' + tweet.text.length + ']');
+  }
+
   if(bannedPhrase = hasBannedPhrase(tweet)) {
     return printSkip(tweet, 'banned phrase (' + bannedPhrase + ')');
   }
