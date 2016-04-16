@@ -10,6 +10,7 @@ var bannedPhrases = [
   /soap/i,
   /milk/i,
   /butter/i,
+  /curry/i,
   /weed/i,
   /hair/i,
   /leather/i,
